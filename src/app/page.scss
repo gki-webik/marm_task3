@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.TreasureQuest {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/media/bg.png");
+  background-size: cover;
+  overflow: hidden;
+  @media screen and (max-width: 500px) {
+    background-image: url("/media/bg2.png");
+  }
+  * {
+    font-family: "Montserrat", sans-serif;
+    color: #422919;
+  }
+  img {
+    user-select: none;
+    pointer-events: none;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      .top__photos {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        & .one {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 100%;
+          }
+          &.win {
+            cursor: pointer;
+          }
+          .symbol {
+            position: absolute;
+            font-size: 100px;
+            font-weight: 900;
+          }
+        }
+        img {
+          max-width: 280px;
+          @media screen and (max-width: 500px) {
+            max-width: 230px;
+          }
+        }
+      }
+      .block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        top: 290px;
+        @media screen and (max-width: 500px) {
+          top: 275px;
+        }
+        .question {
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 86px;
+          &__box {
+            width: 100%;
+            height: 485px;
+          }
+          &__buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px;
+            margin: 33px auto 0 auto;
+            gap: 5px;
+            button {
+              border: none;
+              background: transparent;
+              position: relative;
+              max-width: 150px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              span {
+                position: absolute;
+                font-weight: 700;
+                font-size: 20px;
+              }
+              img {
+                width: 100%;
+              }
+            }
+          }
+          &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            h2 {
+              text-align: center;
+              z-index: 3;
+              font-size: 20px;
+              font-weight: 700;
+              padding: 15px;
+            }
+            img {
+              min-width: 650px;
+              object-fit: cover;
+              position: absolute;
+            }
+          }
+        }
+      }
+      img {
+        &.is-tie {
+          margin-top: -5px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
